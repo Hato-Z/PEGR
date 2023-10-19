@@ -1,0 +1,154 @@
+---- Minecraft Crash Report ----
+// I let you down. Sorry :(
+
+Time: 15-7-17 下午5:44
+Description: Unexpected error
+
+java.lang.NoSuchMethodError: buildcraft.api.core.JavaTools.getAllFields(Ljava/lang/Class;)Ljava/util/List;
+	at buildcraft.api.mj.MjAPI.getMjBatteryField(MjAPI.java:196)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:85)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:55)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:46)
+	at buildcraft.api.power.PowerHandler.<init>(PowerHandler.java:159)
+	at buildcraft.api.power.PowerHandler.<init>(PowerHandler.java:145)
+	at mods.railcraft.common.blocks.machine.alpha.TileRollingMachine.<init>(TileRollingMachine.java:66)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at mods.railcraft.common.blocks.machine.alpha.EnumMachineAlpha.getTileEntity(EnumMachineAlpha.java:129)
+	at mods.railcraft.common.blocks.machine.alpha.MachineProxyAlpha.getTileEntity(MachineProxyAlpha.java:31)
+	at mods.railcraft.common.blocks.machine.BlockMachine.createTileEntity(BlockMachine.java:275)
+	at net.minecraft.world.chunk.Chunk.func_150806_e(Chunk.java:850)
+	at net.minecraft.world.ChunkCache.func_147438_o(ChunkCache.java:97)
+	at mods.railcraft.common.blocks.machine.BlockMachine.getLightValue(BlockMachine.java:287)
+	at net.minecraft.block.Block.func_149677_c(Block.java:528)
+	at net.minecraft.client.renderer.RenderBlocks.func_147751_a(RenderBlocks.java:5001)
+	at net.minecraft.client.renderer.RenderBlocks.func_147784_q(RenderBlocks.java:4712)
+	at net.minecraft.client.renderer.RenderBlocks.func_147805_b(RenderBlocks.java:307)
+	at net.minecraft.client.renderer.WorldRenderer.func_147892_a(WorldRenderer.java:318)
+	at net.minecraft.client.renderer.RenderGlobal.func_72716_a(RenderGlobal.java:2232)
+	at net.minecraft.client.renderer.EntityRenderer.func_78471_a(EntityRenderer.java:1509)
+	at net.minecraft.client.renderer.EntityRenderer.func_78480_b(EntityRenderer.java:1302)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:990)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:887)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at buildcraft.api.mj.MjAPI.getMjBatteryField(MjAPI.java:196)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:85)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:55)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:46)
+	at buildcraft.api.power.PowerHandler.<init>(PowerHandler.java:159)
+	at buildcraft.api.power.PowerHandler.<init>(PowerHandler.java:145)
+	at mods.railcraft.common.blocks.machine.alpha.TileRollingMachine.<init>(TileRollingMachine.java:66)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at mods.railcraft.common.blocks.machine.alpha.EnumMachineAlpha.getTileEntity(EnumMachineAlpha.java:129)
+	at mods.railcraft.common.blocks.machine.alpha.MachineProxyAlpha.getTileEntity(MachineProxyAlpha.java:31)
+	at mods.railcraft.common.blocks.machine.BlockMachine.createTileEntity(BlockMachine.java:275)
+	at net.minecraft.world.chunk.Chunk.func_150806_e(Chunk.java:850)
+	at net.minecraft.world.ChunkCache.func_147438_o(ChunkCache.java:97)
+	at mods.railcraft.common.blocks.machine.BlockMachine.getLightValue(BlockMachine.java:287)
+	at net.minecraft.block.Block.func_149677_c(Block.java:528)
+	at net.minecraft.client.renderer.RenderBlocks.func_147751_a(RenderBlocks.java:5001)
+	at net.minecraft.client.renderer.RenderBlocks.func_147784_q(RenderBlocks.java:4712)
+	at net.minecraft.client.renderer.RenderBlocks.func_147805_b(RenderBlocks.java:307)
+	at net.minecraft.client.renderer.WorldRenderer.func_147892_a(WorldRenderer.java:318)
+	at net.minecraft.client.renderer.RenderGlobal.func_72716_a(RenderGlobal.java:2232)
+	at net.minecraft.client.renderer.EntityRenderer.func_78471_a(EntityRenderer.java:1509)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['selver'/486, l='MpServer', x=609.95, y=78.15, z=896.84]]
+	Chunk stats: MultiplayerChunkCache: 289, 298
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (164,64,252), Chunk: (at 4,4,12 in 10,15; contains blocks 160,0,240 to 175,255,255), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 10422102 game time, 8933733 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 158 total; [EntityCartTank['蓄水槽车'/550, l='MpServer', x=659.50, y=68.50, z=943.50], EntityCartTank['蓄水槽车'/551, l='MpServer', x=661.06, y=68.50, z=943.50], EntityCartTank['蓄水槽车'/548, l='MpServer', x=656.41, y=68.50, z=943.50], EntityCartTank['蓄水槽车'/549, l='MpServer', x=657.91, y=68.50, z=943.50], EntityCartTank['蓄水槽车'/546, l='MpServer', x=653.28, y=68.50, z=943.50], EntityCartTank['蓄水槽车'/547, l='MpServer', x=654.81, y=68.50, z=943.50], EntityCartTank['蓄水槽车'/544, l='MpServer', x=650.16, y=68.50, z=943.50], EntityCartTank['蓄水槽车'/545, l='MpServer', x=651.69, y=68.50, z=943.50], EntityLocomotiveSteamSolid['东风4B高原型'/558, l='MpServer', x=684.22, y=68.50, z=952.50], EntityBat['蝙蝠'/559, l='MpServer', x=677.69, y=41.25, z=974.78], EntityLocomotiveSteamSolid['ND-4'/556, l='MpServer', x=668.97, y=68.50, z=943.50], EntityLocomotiveSteamSolid['东风4B高原型'/10, l='MpServer', x=598.02, y=79.50, z=920.50], EntityCartChest['entity.MinecartChest.name'/557, l='MpServer', x=674.50, y=22.50, z=872.50], EntityCartAnchorAdmin['管理员锚车'/11, l='MpServer', x=599.51, y=79.50, z=920.50], EntityCartTank['蓄水槽车'/554, l='MpServer', x=665.72, y=68.50, z=943.50], EntityCartChest['entity.MinecartChest.name'/12, l='MpServer', x=601.09, y=79.50, z=920.50], EntityCartTank['蓄水槽车'/555, l='MpServer', x=667.31, y=68.50, z=943.50], EntityCartChest['entity.MinecartChest.name'/13, l='MpServer', x=602.61, y=79.50, z=920.50], EntityCartTank['蓄水槽车'/552, l='MpServer', x=662.59, y=68.50, z=943.50], EntityCartChest['entity.MinecartChest.name'/14, l='MpServer', x=604.09, y=79.50, z=920.50], EntityCartTank['蓄水槽车'/553, l='MpServer', x=664.19, y=68.50, z=943.50], EntityCartChest['entity.MinecartChest.name'/15, l='MpServer', x=605.61, y=79.50, z=920.50], EntityLocomotiveSteamSolid['NJ2'/567, l='MpServer', x=710.50, y=72.50, z=886.81], EntityLocomotiveSteamSolid['NJ2'/566, l='MpServer', x=710.50, y=72.50, z=885.06], EntityLocomotiveSteamSolid['NJ2'/565, l='MpServer', x=710.50, y=72.50, z=883.25], EntityLocomotiveSteamSolid['NJ2'/564, l='MpServer', x=710.50, y=72.50, z=881.44], EntityLocomotiveSteamSolid['和谐准高系列'/563, l='MpServer', x=709.50, y=72.50, z=872.50], EntityLocomotiveSteamSolid['和谐准高系列'/562, l='MpServer', x=707.63, y=72.50, z=872.50], EntityBat['蝙蝠'/560, l='MpServer', x=677.53, y=43.10, z=978.69], EntityLocomotiveSteamSolid['和谐货运系列'/575, l='MpServer', x=719.50, y=72.50, z=881.47], EntityLocomotiveSteamSolid['东风4B客运型'/574, l='MpServer', x=716.50, y=72.50, z=892.31], EntityLocomotiveSteamSolid['东风4B客运型'/573, l='MpServer', x=716.50, y=72.50, z=890.50], EntityLocomotiveSteamSolid['东风4B客运型'/572, l='MpServer', x=716.50, y=72.50, z=888.69], EntityLocomotiveSteamSolid['东风4B客运型'/571, l='MpServer', x=716.50, y=72.50, z=886.88], EntityLocomotiveSteamSolid['东风4B客运型'/570, l='MpServer', x=716.50, y=72.50, z=885.09], EntityLocomotiveSteamSolid['东风4B客运型'/569, l='MpServer', x=716.50, y=72.50, z=883.31], EntityLocomotiveSteamSolid['东风4B客运型'/568, l='MpServer', x=716.50, y=72.50, z=881.50], EntityWaypointContainer['未知'/517, l='MpServer', x=0.00, y=0.00, z=0.00], EntityItem['item.item.seeds'/512, l='MpServer', x=575.34, y=64.13, z=867.66], EntityItem['item.item.seeds'/513, l='MpServer', x=565.13, y=64.13, z=868.63], EntityItem['item.item.seeds'/514, l='MpServer', x=566.19, y=64.13, z=869.94], EntityItem['item.item.seeds'/515, l='MpServer', x=562.34, y=64.13, z=868.97], EntityBat['蝙蝠'/520, l='MpServer', x=584.25, y=15.39, z=866.23], EntityItem['item.item.seeds'/521, l='MpServer', x=581.31, y=64.13, z=868.88], EntityItem['item.item.seeds'/522, l='MpServer', x=578.19, y=64.13, z=865.19], EntityBat['蝙蝠'/523, l='MpServer', x=574.42, y=39.29, z=896.40], EntityCartChest['entity.MinecartChest.name'/532, l='MpServer', x=631.50, y=23.50, z=834.50], EntitySquid['鱿鱼'/535, l='MpServer', x=643.47, y=58.91, z=837.03], EntityCartChest['entity.MinecartChest.name'/529, l='MpServer', x=616.50, y=25.50, z=823.50], EntityCartChest['entity.MinecartChest.name'/528, l='MpServer', x=622.50, y=22.50, z=817.50], EntityCartChest['entity.MinecartChest.name'/531, l='MpServer', x=634.50, y=22.50, z=798.50], EntityCartChest['entity.MinecartChest.name'/530, l='MpServer', x=634.50, y=23.50, z=788.50], EntityLocomotiveSteamSolid['ND-4'/541, l='MpServer', x=644.84, y=68.50, z=943.50], EntitySquid['鱿鱼'/540, l='MpServer', x=655.51, y=59.31, z=836.26], EntityLocomotiveSteamSolid['ND-4'/543, l='MpServer', x=648.47, y=68.50, z=943.50], EntityLocomotiveSteamSolid['ND-4'/542, l='MpServer', x=646.66, y=68.50, z=943.50], EntitySquid['鱿鱼'/537, l='MpServer', x=649.57, y=58.00, z=842.53], EntitySquid['鱿鱼'/536, l='MpServer', x=653.80, y=58.75, z=838.47], EntityCartEnergyCESU['CESU储电车'/610, l='MpServer', x=716.50, y=68.50, z=983.44], EntityCartEnergyCESU['CESU储电车'/611, l='MpServer', x=716.50, y=68.50, z=981.84], EntityCartEnergyCESU['CESU储电车'/608, l='MpServer', x=716.50, y=68.50, z=986.53], EntityCartEnergyCESU['CESU储电车'/609, l='MpServer', x=716.50, y=68.50, z=984.97], EntityCartEnergyCESU['CESU储电车'/614, l='MpServer', x=716.50, y=68.50, z=977.22], EntityCartEnergyCESU['CESU储电车'/615, l='MpServer', x=713.50, y=68.50, z=991.66], EntityCartEnergyCESU['CESU储电车'/612, l='MpServer', x=716.50, y=68.50, z=980.31], EntityCartEnergyCESU['CESU储电车'/613, l='MpServer', x=716.50, y=68.50, z=978.75], EntityCartEnergyCESU['CESU储电车'/618, l='MpServer', x=716.50, y=68.50, z=994.38], EntityCartEnergyCESU['CESU储电车'/619, l='MpServer', x=716.50, y=68.50, z=992.78], EntityCartEnergyCESU['CESU储电车'/616, l='MpServer', x=713.50, y=68.50, z=994.78], EntityCartEnergyCESU['CESU储电车'/617, l='MpServer', x=713.50, y=68.50, z=993.25], EntityLocomotiveSteamSolid['东风4B高原型'/622, l='MpServer', x=728.50, y=72.50, z=885.03], EntityLocomotiveSteamSolid['和谐准高系列'/623, l='MpServer', x=722.50, y=72.50, z=881.44], EntityLocomotiveSteamSolid['东风4B高原型'/620, l='MpServer', x=728.50, y=72.50, z=881.44], EntityLocomotiveSteamSolid['东风4B高原型'/621, l='MpServer', x=728.50, y=72.50, z=883.25], EntityLocomotiveSteamSolid['东风4B高原型'/627, l='MpServer', x=728.50, y=72.50, z=886.81], EntityLocomotiveSteamSolid['和谐准高系列'/626, l='MpServer', x=722.50, y=72.50, z=886.16], EntityLocomotiveSteamSolid['和谐准高系列'/625, l='MpServer', x=722.50, y=72.50, z=884.56], EntityLocomotiveSteamSolid['和谐准高系列'/624, l='MpServer', x=722.50, y=72.50, z=882.97], EntityLocomotiveSteamSolid['8K'/631, l='MpServer', x=731.50, y=72.50, z=886.81], EntityLocomotiveSteamSolid['8K'/630, l='MpServer', x=731.50, y=72.50, z=885.06], EntityLocomotiveSteamSolid['8K'/629, l='MpServer', x=731.50, y=72.50, z=883.25], EntityLocomotiveSteamSolid['8K'/628, l='MpServer', x=731.50, y=72.50, z=881.44], EntityLocomotiveSteamSolid['ND-4'/635, l='MpServer', x=725.50, y=72.50, z=886.81], EntityLocomotiveSteamSolid['ND-4'/634, l='MpServer', x=725.50, y=72.50, z=885.06], EntityLocomotiveSteamSolid['ND-4'/633, l='MpServer', x=725.50, y=72.50, z=883.25], EntityLocomotiveSteamSolid['ND-4'/632, l='MpServer', x=725.50, y=72.50, z=881.47], EntityLocomotiveSteamSolid['韶山8'/639, l='MpServer', x=728.50, y=72.50, z=894.03], EntityLocomotiveSteamSolid['韶山8'/638, l='MpServer', x=728.50, y=72.50, z=892.25], EntityLocomotiveSteamSolid['韶山8'/637, l='MpServer', x=728.50, y=72.50, z=890.44], EntityLocomotiveSteamSolid['韶山8'/636, l='MpServer', x=728.50, y=72.50, z=888.63], EntityLocomotiveSteamSolid['和谐货运系列'/576, l='MpServer', x=719.50, y=72.50, z=883.28], EntityLocomotiveSteamSolid['东风4B客运型'/577, l='MpServer', x=716.50, y=72.50, z=894.09], EntityLocomotiveSteamSolid['韶山9G'/578, l='MpServer', x=713.50, y=72.50, z=905.38], EntityLocomotiveSteamSolid['韶山9G'/579, l='MpServer', x=713.50, y=72.50, z=903.53], EntityLocomotiveSteamSolid['韶山9G'/580, l='MpServer', x=713.50, y=72.50, z=901.72], EntityLocomotiveSteamSolid['韶山9G'/581, l='MpServer', x=713.50, y=72.50, z=899.94], EntityLocomotiveSteamSolid['和谐准高系列'/582, l='MpServer', x=710.50, y=68.50, z=931.50], EntityLocomotiveSteamSolid['东风4B货运型'/583, l='MpServer', x=717.59, y=68.50, z=958.50], EntityLocomotiveSteamSolid['东风4B货运型'/584, l='MpServer', x=719.44, y=68.50, z=958.50], EntityLocomotiveSteamSolid['东风4B货运型'/585, l='MpServer', x=715.81, y=68.50, z=958.50], EntityLocomotiveSteamSolid['8K'/586, l='MpServer', x=719.28, y=68.50, z=956.50], EntityLocomotiveSteamSolid['8K'/587, l='MpServer', x=717.47, y=68.50, z=956.50], EntityLocomotiveElectric['电力机车'/377, l='MpServer', x=629.28, y=63.34, z=920.50], EntityCartEnergyCESU['CESU储电车'/589, l='MpServer', x=716.50, y=68.50, z=975.63], EntityCartEnergyCESU['CESU储电车'/590, l='MpServer', x=716.50, y=68.50, z=974.09], EntityBat['蝙蝠'/378, l='MpServer', x=627.50, y=57.10, z=925.25], EntityCartEnergyCESU['CESU储电车'/591, l='MpServer', x=716.50, y=68.50, z=972.50], EntityCartEnergyCESU['CESU储电车'/593, l='MpServer', x=716.50, y=68.50, z=969.41], EntityCartEnergyCESU['CESU储电车'/592, l='MpServer', x=716.50, y=68.50, z=970.94], EntityLocomotiveSteamSolid['东风7C调机机车'/595, l='MpServer', x=709.44, y=68.50, z=963.50], EntityCartEnergyMFE['MFE储电车'/594, l='MpServer', x=716.50, y=68.50, z=967.81], EntityCartChest['entity.MinecartChest.name'/597, l='MpServer', x=713.50, y=68.50, z=988.53], EntityCartChest['entity.MinecartChest.name'/596, l='MpServer', x=713.50, y=68.50, z=990.13], EntityCartChest['entity.MinecartChest.name'/599, l='MpServer', x=713.50, y=68.50, z=985.44], EntityCartChest['entity.MinecartChest.name'/598, l='MpServer', x=713.50, y=68.50, z=986.97], EntityCartChest['entity.MinecartChest.name'/601, l='MpServer', x=713.50, y=68.50, z=982.34], EntityCartChest['entity.MinecartChest.name'/600, l='MpServer', x=713.50, y=68.50, z=983.84], EntityCartChest['entity.MinecartChest.name'/603, l='MpServer', x=713.50, y=68.50, z=979.22], EntityCartChest['entity.MinecartChest.name'/602, l='MpServer', x=713.50, y=68.50, z=980.75], EntityCartEnergyCESU['CESU储电车'/605, l='MpServer', x=716.50, y=68.50, z=991.25], EntityCartChest['entity.MinecartChest.name'/604, l='MpServer', x=713.50, y=68.50, z=977.63], EntityCartEnergyCESU['CESU储电车'/607, l='MpServer', x=716.50, y=68.50, z=988.13], EntityCartEnergyCESU['CESU储电车'/606, l='MpServer', x=716.50, y=68.50, z=989.66], EntityLocomotiveSteamSolid['东风4B高原型'/653, l='MpServer', x=749.50, y=72.50, z=890.50], EntityLocomotiveSteamSolid['和谐准高系列'/652, l='MpServer', x=749.50, y=72.50, z=884.50], EntityLocomotiveSteamSolid['东风4B货运型'/655, l='MpServer', x=749.50, y=72.50, z=887.50], EntityLocomotiveSteamSolid['东风4B客运型'/654, l='MpServer', x=749.50, y=72.50, z=893.50], EntityLocomotiveSteamSolid['8K'/649, l='MpServer', x=722.84, y=68.50, z=956.50], EntityLocomotiveSteamSolid['东风4B高原型'/648, l='MpServer', x=722.84, y=68.50, z=958.50], EntityLocomotiveSteamSolid['和谐货运系列'/651, l='MpServer', x=749.50, y=72.50, z=881.50], EntityLocomotiveSteamSolid['8K'/650, l='MpServer', x=721.09, y=68.50, z=956.50], EntityLocomotiveSteamSolid['和谐准高系列'/645, l='MpServer', x=722.50, y=72.50, z=894.53], EntityLocomotiveSteamSolid['和谐准高系列'/644, l='MpServer', x=722.50, y=72.50, z=892.72], EntityLocomotiveSteamSolid['和谐准高系列'/647, l='MpServer', x=722.50, y=72.50, z=896.38], EntityLocomotiveSteamSolid['韶山8'/646, l='MpServer', x=728.50, y=72.50, z=897.63], EntityLocomotiveSteamSolid['和谐准高系列'/641, l='MpServer', x=722.50, y=72.50, z=887.41], EntityLocomotiveSteamSolid['韶山8'/640, l='MpServer', x=728.50, y=72.50, z=895.81], EntityLocomotiveSteamSolid['和谐准高系列'/643, l='MpServer', x=722.50, y=72.50, z=890.94], EntityLocomotiveSteamSolid['和谐准高系列'/642, l='MpServer', x=722.50, y=72.50, z=889.16], EntityLocomotiveElectric['和谐号动车组'/664, l='MpServer', x=749.50, y=72.50, z=918.09], EntityLocomotiveSteamSolid['东风7C调机机车'/665, l='MpServer', x=749.50, y=72.50, z=920.50], EntityLocomotiveSteamSolid['韶山4G'/660, l='MpServer', x=749.50, y=72.50, z=908.13], EntityLocomotiveSteamSolid['韶山4G'/661, l='MpServer', x=749.50, y=72.50, z=909.91], EntityLocomotiveSteamSolid['NJ2'/662, l='MpServer', x=749.50, y=72.50, z=913.16], EntityLocomotiveSteamSolid['NJ2'/663, l='MpServer', x=749.50, y=72.50, z=914.94], EntityLocomotiveSteamSolid['韶山9G'/656, l='MpServer', x=749.50, y=72.50, z=896.50], EntityLocomotiveSteamSolid['韶山8'/657, l='MpServer', x=749.50, y=72.50, z=899.50], EntityLocomotiveSteamSolid['韶山3B'/658, l='MpServer', x=749.50, y=72.50, z=903.13], EntityLocomotiveSteamSolid['韶山3B'/659, l='MpServer', x=749.50, y=72.50, z=904.91], EntityVillager['村民'/472, l='MpServer', x=560.36, y=67.09, z=846.19], EntityVillager['村民'/473, l='MpServer', x=564.31, y=66.00, z=845.44], EntityVillager['村民'/470, l='MpServer', x=564.88, y=66.00, z=846.31], EntityItem['item.tile.torch'/471, l='MpServer', x=572.81, y=65.13, z=844.78], EntityCartChest['entity.MinecartChest.name'/468, l='MpServer', x=616.50, y=21.50, z=911.50], EntityPig['猪'/510, l='MpServer', x=560.94, y=70.00, z=822.97], EntityCartChest['entity.MinecartChest.name'/511, l='MpServer', x=560.50, y=22.50, z=874.50], EntityPig['猪'/506, l='MpServer', x=536.84, y=78.00, z=835.56], EntityClientPlayerMP['selver'/486, l='MpServer', x=609.95, y=78.15, z=896.84]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.func_72914_a(WorldClient.java:373)
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2433)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:916)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows XP (x86) version 5.1
+	Java Version: 1.7.0_67, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode), Oracle Corporation
+	Memory: 287268792 bytes (273 MB) / 815140864 bytes (777 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 1 total; -Xmx1024m
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 96
+	FML: MCP v9.05 FML v7.10.85.1231 Minecraft Forge 10.13.2.1231 Optifine OptiFine_1.7.10_HD_U_B1[hukk汉化] 23 mods loaded, 23 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{7.10.85.1231} [Forge Mod Loader] (forge-1.7.10-10.13.2.1231.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{10.13.2.1231} [Minecraft Forge] (forge-1.7.10-10.13.2.1231.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	InputFix{1.7.x-v2} [InputFix] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	OldModelLoader{1.0} [OldModelLoader] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	TooManyItems{1.7.10[hukk汉化]} [TooManyItems] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	uniskinmod{1.1} [Universal Skin Mod] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	craftguide{1.5.2} [CraftGuide] (CraftGuide-1.6.8.0[hukk汉化].zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	healthbar{1.2} [Health Bar] (HealthBar-1.3-1.7.X.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	IC2{2.2.667-experimental} [IndustrialCraft 2] (industrialcraft-2-2.2.667-experimental.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	inventorytweaks{1.57-116} [Inventory Tweaks] (InventoryTweaks-1.58-dev-119.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	lmmx{1.0} [lmmx] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MMMLibX{1.7.x-srg-1} [MMMLibX] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	zabuton{1.0} [zabuton] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Core{6.3.4} [BuildCraft] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Builders{6.3.4} [BC Builders] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Energy{6.3.4} [BC Energy] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Factory{6.3.4} [BC Factory] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Railcraft{9.3.0.0} [Railcraft] (Railcraft_1.7.10-9.3.0.0.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	voxelmap{1.7.10} [VoxelMap No Radar] (Zans-Minimap-No-Radar-Mod-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	zyinhud{1.3.6} [Zyin's HUD] (ZyinsHUD-(1.7.10)-v.1.3.6.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Transport{6.3.4} [BC Transport] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Silicon{6.3.4} [BC Silicon] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 七国服务器-1.7.10
+	LWJGL: 2.9.1
+	OpenGL: NVS 3100M/PCIe/SSE2 GL version 3.3.0, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: 简体中文 (中国)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

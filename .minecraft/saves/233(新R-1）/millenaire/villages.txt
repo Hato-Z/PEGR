@@ -1,0 +1,5 @@
+Nouji Mura;671/73/1107;nogyo;japanese;
+Gunjiteki Mura;787/72/1066;gunji;japanese;
+Kasugai;584/68/1021;trading;japanese;
+Saint-Charles-les-pâtures;697/69/798;hameau_agricole;norman;
+Hachinohe;-366/83/-599;seiji;japanese;

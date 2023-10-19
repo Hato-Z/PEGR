@@ -1,0 +1,124 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 19-7-19 下午9:45
+Description: Unexpected error
+
+java.lang.IndexOutOfBoundsException: Index: 45, Size: 45
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at net.minecraft.inventory.Container.func_75139_a(SourceFile:104)
+	at net.minecraft.inventory.Container.func_75131_a(SourceFile:390)
+	at net.minecraft.client.network.NetHandlerPlayClient.func_147241_a(NetHandlerPlayClient.java:1056)
+	at net.minecraft.network.play.server.S30PacketWindowItems.func_148833_a(SourceFile:49)
+	at net.minecraft.network.play.server.S30PacketWindowItems.func_148833_a(SourceFile:11)
+	at net.minecraft.network.NetworkManager.func_74428_b(NetworkManager.java:212)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.func_78765_e(PlayerControllerMP.java:273)
+	at net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:1591)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:962)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:887)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at net.minecraft.inventory.Container.func_75139_a(SourceFile:104)
+	at net.minecraft.inventory.Container.func_75131_a(SourceFile:390)
+	at net.minecraft.client.network.NetHandlerPlayClient.func_147241_a(NetHandlerPlayClient.java:1056)
+	at net.minecraft.network.play.server.S30PacketWindowItems.func_148833_a(SourceFile:49)
+	at net.minecraft.network.play.server.S30PacketWindowItems.func_148833_a(SourceFile:11)
+	at net.minecraft.network.NetworkManager.func_74428_b(NetworkManager.java:212)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.func_78765_e(PlayerControllerMP.java:273)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['selver'/532, l='MpServer', x=548.80, y=81.62, z=-1392.66]]
+	Chunk stats: MultiplayerChunkCache: 81, 90
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (164,64,252), Chunk: (at 4,4,12 in 10,15; contains blocks 160,0,240 to 175,255,255), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 20495090 game time, 2089112 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 62 total; [EntityBlock['未知'/125961, l='MpServer', x=495.25, y=62.00, z=-946.75], EntityBlock['未知'/125960, l='MpServer', x=495.25, y=62.00, z=-948.75], EntityCow['牛'/186891, l='MpServer', x=511.22, y=76.00, z=-1455.03], EntityCow['牛'/183824, l='MpServer', x=594.28, y=79.00, z=-1413.28], EntityBlock['未知'/125987, l='MpServer', x=499.25, y=62.00, z=-948.75], EntityBlock['未知'/125988, l='MpServer', x=499.25, y=62.00, z=-946.75], EntityClientPlayerMP['selver'/532, l='MpServer', x=548.80, y=81.62, z=-1392.66], EntityCartCargo['货运车'/184407, l='MpServer', x=558.50, y=78.50, z=-1392.84], EntityItem['item.item.hatchetGold'/188003, l='MpServer', x=548.34, y=80.13, z=-1390.09], EntityCartCargo['货运车'/184441, l='MpServer', x=558.50, y=78.50, z=-1391.34], EntityCartCargo['货运车'/183935, l='MpServer', x=548.50, y=79.52, z=-1406.06], EntityCartCargo['货运车'/184450, l='MpServer', x=558.50, y=78.50, z=-1389.69], EntityCartCargo['货运车'/183939, l='MpServer', x=550.25, y=79.52, z=-1408.50], EntityCartCargo['货运车'/183937, l='MpServer', x=549.03, y=79.50, z=-1407.50], EntityCartCargo['货运车'/183941, l='MpServer', x=551.78, y=79.50, z=-1408.50], EntityCow['牛'/183455, l='MpServer', x=494.69, y=91.00, z=-1335.47], EntityLocomotiveElectric['韶峰型工矿机车'/186028, l='MpServer', x=558.50, y=78.88, z=-1386.59], EntityCartCargo['货运车'/184517, l='MpServer', x=558.50, y=78.50, z=-1388.22], EntityCartCargo['货运车'/184013, l='MpServer', x=553.34, y=79.50, z=-1408.50], EntityCartCargo['货运车'/184018, l='MpServer', x=554.88, y=79.50, z=-1408.50], EntityWaypointContainer['未知'/722, l='MpServer', x=0.00, y=0.00, z=0.00], EntityCartCargo['货运车'/184030, l='MpServer', x=556.47, y=79.50, z=-1408.06], EntityCartCargo['货运车'/184039, l='MpServer', x=558.16, y=79.50, z=-1406.38], EntityCartCargo['货运车'/184040, l='MpServer', x=558.50, y=79.50, z=-1404.88], EntityCartCargo['货运车'/184041, l='MpServer', x=558.50, y=79.50, z=-1403.34], EntityCartCargo['货运车'/184057, l='MpServer', x=558.50, y=79.50, z=-1401.75], EntityCow['牛'/187135, l='MpServer', x=591.53, y=121.00, z=-1324.44], EntityCow['牛'/187138, l='MpServer', x=620.50, y=120.00, z=-1315.53], EntityCow['牛'/187139, l='MpServer', x=611.09, y=126.00, z=-1321.81], EntityCow['牛'/187137, l='MpServer', x=607.59, y=126.00, z=-1324.75], EntityCartCargo['货运车'/184080, l='MpServer', x=558.50, y=79.50, z=-1400.22], EntityCow['牛'/186669, l='MpServer', x=558.44, y=67.00, z=-1450.63], EntityCartCargo['货运车'/184115, l='MpServer', x=558.50, y=78.50, z=-1399.03], EntityCow['牛'/186694, l='MpServer', x=543.47, y=77.00, z=-1453.53], EntityCow['牛'/186693, l='MpServer', x=540.47, y=85.00, z=-1449.75], EntityCartCargo['货运车'/184200, l='MpServer', x=558.50, y=78.50, z=-1397.50], EntitySheep['羊'/186775, l='MpServer', x=581.34, y=76.00, z=-1439.56], EntityCow['牛'/186786, l='MpServer', x=523.41, y=78.00, z=-1454.38], EntityCow['牛'/186787, l='MpServer', x=515.31, y=76.00, z=-1438.25], EntityCow['牛'/186785, l='MpServer', x=514.63, y=77.00, z=-1453.59], EntityCartCargo['货运车'/184235, l='MpServer', x=558.50, y=78.50, z=-1395.91], EntityBlock['未知'/159154, l='MpServer', x=495.25, y=62.00, z=-948.75], EntityBlock['未知'/159155, l='MpServer', x=495.25, y=62.00, z=-946.75], EntityBlock['未知'/159152, l='MpServer', x=499.25, y=62.00, z=-948.75], EntityBlock['未知'/159153, l='MpServer', x=499.25, y=62.00, z=-946.75], EntitySheep['羊'/185270, l='MpServer', x=584.81, y=76.00, z=-1434.91], EntitySheep['羊'/185271, l='MpServer', x=589.16, y=75.00, z=-1439.50], EntityCow['牛'/185268, l='MpServer', x=608.19, y=73.00, z=-1432.16], EntityCow['牛'/185269, l='MpServer', x=603.81, y=76.00, z=-1427.81], EntityCow['牛'/185274, l='MpServer', x=535.56, y=78.00, z=-1432.50], EntityCow['牛'/185275, l='MpServer', x=532.31, y=88.00, z=-1439.31], EntitySheep['羊'/185272, l='MpServer', x=587.16, y=77.00, z=-1431.66], EntityCow['牛'/185273, l='MpServer', x=566.13, y=63.00, z=-1435.50], EntityCow['牛'/185278, l='MpServer', x=555.81, y=69.00, z=-1439.47], EntityCow['牛'/185276, l='MpServer', x=525.94, y=75.00, z=-1435.91], EntityCow['牛'/185277, l='MpServer', x=514.69, y=76.00, z=-1425.75], EntityCartCargo['货运车'/184267, l='MpServer', x=558.50, y=78.50, z=-1394.41], EntityCow['牛'/183762, l='MpServer', x=504.41, y=85.00, z=-1413.38], EntityBlock['未知'/165347, l='MpServer', x=499.25, y=62.00, z=-948.75], EntityBlock['未知'/165350, l='MpServer', x=495.25, y=62.00, z=-946.75], EntityBlock['未知'/165348, l='MpServer', x=499.25, y=62.00, z=-946.75], EntityBlock['未知'/165349, l='MpServer', x=495.25, y=62.00, z=-948.75]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.func_72914_a(WorldClient.java:373)
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2433)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:916)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (x86) version 10.0
+	Java Version: 1.8.0_144, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode), Oracle Corporation
+	Memory: 123060168 bytes (117 MB) / 922419200 bytes (879 MB) up to 922419200 bytes (879 MB)
+	JVM Flags: 1 total; -Xmx909m
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 15, tallocated: 95
+	FML: MCP v9.05 FML v7.10.85.1231 Minecraft Forge 10.13.2.1231 Optifine OptiFine_1.7.10_HD_U_B1[hukk汉化] 25 mods loaded, 25 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{7.10.85.1231} [Forge Mod Loader] (forge-1.7.10-10.13.2.1231.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{10.13.2.1231} [Minecraft Forge] (forge-1.7.10-10.13.2.1231.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	InputFix{1.7.x-v2} [InputFix] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	OldModelLoader{1.0} [OldModelLoader] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	TooManyItems{1.7.10[hukk汉化]} [TooManyItems] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	uniskinmod{1.1} [Universal Skin Mod] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	craftguide{1.5.2} [CraftGuide] (CraftGuide-1.6.8.0[hukk汉化].zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	healthbar{1.2} [Health Bar] (HealthBar-1.3-1.7.X.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	IC2{2.2.667-experimental} [IndustrialCraft 2] (industrialcraft-2-2.2.667-experimental.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ImmibisCore{59.0.1} [Immibis Core] (immibis-core-59.0.1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	inventorytweaks{1.57-116} [Inventory Tweaks] (InventoryTweaks-1.58-dev-119.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	lmmx{1.0} [lmmx] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MMMLibX{1.7.x-srg-1} [MMMLibX] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	zabuton{1.0} [zabuton] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MovingWorld{1.7.10-1.8} [Moving World] (movingworld-1.7.10-1.8.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Core{6.3.4} [BuildCraft] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Railcraft{9.12.2.0} [Railcraft] (Railcraft_1.7.10-9.12.2.0.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	voxelmap{1.7.10} [VoxelMap No Radar] (Zans-Minimap-No-Radar-Mod-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	zyinhud{1.3.6} [Zyin's HUD] (ZyinsHUD-(1.7.10)-v.1.3.6.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Transport{6.3.4} [BC Transport] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Silicon{6.3.4} [BC Silicon] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Builders{6.3.4} [BC Builders] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Energy{6.3.4} [BC Energy] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Factory{6.3.4} [BC Factory] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 七国服务器-1.7.10
+	LWJGL: 2.9.1
+	OpenGL: GeForce 940M/PCIe/SSE2 GL version 4.6.0 NVIDIA 398.36, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: 简体中文 (中国)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

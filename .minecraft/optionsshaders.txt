@@ -1,0 +1,17 @@
+#Mon Jan 23 13:57:25 CST 2023
+TexMinFilB=0
+shadowResMul=1.0
+tweakBlockDamage=false
+TexMagFilB=0
+handDepthMul=1.0
+oldLighting=false
+shaderPack=(none)
+TexMinFilS=0
+renderResMul=1.0
+TexMagFilS=0
+TexMinFilN=0
+shadowClipFrustrum=true
+TexMagFilN=0
+normalMapEnabled=false
+cloudShadow=true
+specularMapEnabled=false

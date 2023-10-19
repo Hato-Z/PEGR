@@ -1,0 +1,4 @@
+culture_reputation=norman,-368
+culture_reputation=japanese,-248
+village_reputations=697/69/798,-3680
+village_reputations=584/68/1021,-2480

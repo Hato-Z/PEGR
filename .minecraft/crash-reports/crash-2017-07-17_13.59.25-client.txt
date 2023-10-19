@@ -1,0 +1,119 @@
+---- Minecraft Crash Report ----
+// I bet Cylons wouldn't have this problem.
+
+Time: 17-7-17 下午1:59
+Description: Unexpected error
+
+java.lang.IllegalStateException: Already tesselating!
+	at net.minecraft.client.renderer.Tessellator.func_78371_b(Tessellator.java:374)
+	at net.minecraft.client.renderer.Tessellator.func_78382_b(Tessellator.java:364)
+	at shadersmodcore.client.Shaders.drawHorizon(Shaders.java:3295)
+	at shadersmodcore.client.Shaders.preSkyList(Shaders.java:3350)
+	at net.minecraft.client.renderer.RenderGlobal.func_72714_a(RenderGlobal.java:1624)
+	at net.minecraft.client.renderer.EntityRenderer.func_78471_a(EntityRenderer.java:1483)
+	at net.minecraft.client.renderer.EntityRenderer.func_78480_b(EntityRenderer.java:1302)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:990)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:887)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.client.renderer.Tessellator.func_78371_b(Tessellator.java:374)
+	at net.minecraft.client.renderer.Tessellator.func_78382_b(Tessellator.java:364)
+	at shadersmodcore.client.Shaders.drawHorizon(Shaders.java:3295)
+	at shadersmodcore.client.Shaders.preSkyList(Shaders.java:3350)
+	at net.minecraft.client.renderer.RenderGlobal.func_72714_a(RenderGlobal.java:1624)
+	at net.minecraft.client.renderer.EntityRenderer.func_78471_a(EntityRenderer.java:1483)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['selver'/546, l='MpServer', x=735.90, y=74.19, z=952.58]]
+	Chunk stats: MultiplayerChunkCache: 81, 90
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (164,64,252), Chunk: (at 4,4,12 in 10,15; contains blocks 160,0,240 to 175,255,255), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 19938648 game time, 913912 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 124 total; [EntityCartTank['Tank Cart'/512, l='MpServer', x=661.44, y=68.50, z=929.50], EntityCartTank['Tank Cart'/513, l='MpServer', x=662.97, y=68.50, z=929.50], EntityMinecartHopper['entity.MinecartHopper.name'/30, l='MpServer', x=677.94, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/31, l='MpServer', x=679.50, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/32, l='MpServer', x=681.09, y=68.50, z=956.50], EntityLocomotiveSteamSolid['ND5 0003'/33, l='MpServer', x=684.34, y=68.50, z=956.50], EntityLocomotiveSteamSolid['ND5 0004'/34, l='MpServer', x=686.13, y=68.50, z=956.50], EntityCartAnchorAdmin['Admin Anchor Cart'/35, l='MpServer', x=682.63, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/36, l='MpServer', x=676.44, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/37, l='MpServer', x=674.84, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/38, l='MpServer', x=673.31, y=68.50, z=956.50], EntityBat['Bat'/562, l='MpServer', x=674.16, y=38.00, z=1014.00], EntityClientPlayerMP['selver'/546, l='MpServer', x=735.90, y=74.19, z=952.58], EntitySquid['Squid'/564, l='MpServer', x=713.46, y=57.89, z=929.52], EntitySquid['Squid'/565, l='MpServer', x=711.43, y=57.35, z=929.53], EntityLocomotiveElectric['韶山3 0002'/566, l='MpServer', x=708.50, y=68.50, z=973.56], EntityLocomotiveElectric['韶山3 0001'/567, l='MpServer', x=708.50, y=68.50, z=971.72], EntityLocomotiveElectric['韶山3 0004'/568, l='MpServer', x=708.50, y=68.50, z=969.88], EntityLocomotiveElectric['韶山3 0003'/569, l='MpServer', x=708.50, y=68.50, z=968.03], EntityLocomotiveSteamSolid['ND4 0001'/570, l='MpServer', x=719.09, y=68.50, z=964.50], EntityLocomotiveSteamSolid['ND4 0002'/571, l='MpServer', x=717.31, y=68.50, z=964.50], EntityCartEnergyCESU['CESU Cart'/572, l='MpServer', x=719.38, y=68.50, z=988.50], EntityCartEnergyCESU['CESU Cart'/573, l='MpServer', x=717.78, y=68.50, z=988.50], EntityCartEnergyCESU['CESU Cart'/574, l='MpServer', x=716.25, y=68.50, z=988.50], EntityLocomotiveSteamSolid['HXN5 0005'/575, l='MpServer', x=735.56, y=68.50, z=964.50], EntityLocomotiveSteamSolid['ND5 0007'/576, l='MpServer', x=733.50, y=68.50, z=961.50], EntityLocomotiveSteamSolid['ND5 0008'/577, l='MpServer', x=731.72, y=68.50, z=961.50], EntityLocomotiveSteamSolid['HXN3 0010'/578, l='MpServer', x=730.25, y=68.50, z=968.50], EntityLocomotiveSteamSolid['HXN3 0009'/579, l='MpServer', x=728.44, y=68.50, z=968.50], EntityLocomotiveSteamSolid['HXN3 0008'/580, l='MpServer', x=726.66, y=68.50, z=968.50], EntityLocomotiveSteamSolid['HXN3 0007'/581, l='MpServer', x=724.84, y=68.50, z=968.50], EntityLocomotiveSteamSolid['HXN3 0004'/582, l='MpServer', x=730.94, y=68.50, z=964.50], EntityLocomotiveSteamSolid['HXN3 0003'/583, l='MpServer', x=729.16, y=68.50, z=964.50], EntityLocomotiveSteamSolid['ND5 0013'/584, l='MpServer', x=734.22, y=68.50, z=973.50], EntityLocomotiveSteamSolid['ND5 0012'/585, l='MpServer', x=732.41, y=68.50, z=973.50], EntityLocomotiveSteamSolid['ND5 0002'/586, l='MpServer', x=724.63, y=68.50, z=973.50], EntityLocomotiveSteamSolid['ND5 0014'/587, l='MpServer', x=722.81, y=68.50, z=973.50], EntityLocomotiveSteamSolid['HXN3 0012'/588, l='MpServer', x=722.69, y=68.50, z=964.50], EntityLocomotiveSteamSolid['HXN3 0011'/589, l='MpServer', x=720.91, y=68.50, z=964.50], EntityCartEnergyCESU['CESU Cart'/590, l='MpServer', x=734.94, y=68.50, z=988.50], EntityCartEnergyCESU['CESU Cart'/591, l='MpServer', x=733.44, y=68.50, z=988.50], EntityCartEnergyCESU['CESU Cart'/592, l='MpServer', x=731.84, y=68.50, z=988.50], EntityCartEnergyCESU['CESU Cart'/593, l='MpServer', x=730.31, y=68.50, z=988.50], EntityCartEnergyCESU['CESU Cart'/594, l='MpServer', x=728.72, y=68.50, z=988.50], EntityCartEnergyCESU['CESU Cart'/595, l='MpServer', x=727.19, y=68.50, z=988.50], EntityCartEnergyCESU['CESU Cart'/596, l='MpServer', x=725.59, y=68.50, z=988.50], EntityCartEnergyCESU['CESU Cart'/597, l='MpServer', x=724.06, y=68.50, z=988.50], EntityCartEnergyCESU['CESU Cart'/598, l='MpServer', x=722.50, y=68.50, z=988.50], EntityCartEnergyCESU['CESU Cart'/599, l='MpServer', x=720.91, y=68.50, z=988.50], EntityCartTank['Tank Cart'/600, l='MpServer', x=727.75, y=68.50, z=1001.50], EntityCartTank['Tank Cart'/601, l='MpServer', x=729.34, y=68.50, z=1001.50], EntityCartTank['Tank Cart'/602, l='MpServer', x=730.88, y=68.50, z=1001.50], EntityCartTank['Tank Cart'/603, l='MpServer', x=732.47, y=68.50, z=1001.50], EntityCartTank['Tank Cart'/604, l='MpServer', x=734.03, y=68.50, z=1001.50], EntityCartTank['Tank Cart'/605, l='MpServer', x=735.56, y=68.50, z=1001.50], EntityBat['Bat'/606, l='MpServer', x=745.50, y=27.00, z=883.63], EntityBat['Bat'/607, l='MpServer', x=737.63, y=31.00, z=885.56], EntityLocomotiveSteamSolid['和谐货运系列'/608, l='MpServer', x=749.50, y=72.50, z=881.50], EntityLocomotiveSteamSolid['和谐准高系列'/609, l='MpServer', x=749.50, y=72.50, z=884.50], EntityLocomotiveSteamSolid['东风4B高原型'/610, l='MpServer', x=749.50, y=72.50, z=890.50], EntityLocomotiveSteamSolid['东风4B客运型'/611, l='MpServer', x=749.50, y=72.50, z=893.50], EntityLocomotiveSteamSolid['东风4B货运型'/612, l='MpServer', x=749.50, y=72.50, z=887.50], EntityLocomotiveSteamSolid['韶山9G'/613, l='MpServer', x=749.50, y=72.50, z=896.50], EntityLocomotiveSteamSolid['韶山8'/614, l='MpServer', x=749.50, y=72.50, z=899.50], EntityLocomotiveSteamSolid['韶山3B'/615, l='MpServer', x=749.50, y=72.50, z=903.13], EntityLocomotiveSteamSolid['韶山3B'/616, l='MpServer', x=749.50, y=72.50, z=904.91], EntityLocomotiveSteamSolid['韶山4G'/617, l='MpServer', x=749.50, y=72.34, z=908.13], EntityLocomotiveSteamSolid['韶山4G'/618, l='MpServer', x=749.50, y=72.34, z=909.91], EntityLocomotiveSteamSolid['NJ2'/619, l='MpServer', x=749.50, y=72.34, z=913.16], EntityLocomotiveSteamSolid['NJ2'/620, l='MpServer', x=749.50, y=72.34, z=914.94], EntityLocomotiveElectric['和谐号动车组'/621, l='MpServer', x=749.50, y=72.34, z=918.09], EntityLocomotiveSteamSolid['东风7C调机机车'/622, l='MpServer', x=749.50, y=69.34, z=920.50], EntityLocomotiveSteamSolid['ND-4'/623, l='MpServer', x=749.50, y=69.34, z=923.50], EntityLocomotiveSteamSolid['6K'/624, l='MpServer', x=749.50, y=69.34, z=926.50], EntityLocomotiveSteamSolid['8K'/625, l='MpServer', x=749.50, y=69.34, z=930.25], EntityLocomotiveSteamSolid['8K'/626, l='MpServer', x=749.50, y=68.34, z=931.72], EntityCartTank['Tank Cart'/627, l='MpServer', x=736.50, y=68.50, z=936.50], EntityLocomotiveSteamSolid['DF7C 0003'/628, l='MpServer', x=750.47, y=68.50, z=959.50], EntityLocomotiveSteamSolid['ND5 0010'/629, l='MpServer', x=737.81, y=68.50, z=973.50], EntityLocomotiveSteamSolid['ND5 0011'/630, l='MpServer', x=739.63, y=68.50, z=973.50], EntityLocomotiveSteamSolid['HXN5 0006'/631, l='MpServer', x=737.38, y=68.50, z=964.50], EntityLocomotiveSteamSolid['ND5 0009'/632, l='MpServer', x=736.03, y=68.50, z=973.50], EntityCartEnergyCESU['CESU Cart'/633, l='MpServer', x=736.50, y=68.50, z=988.50], EntityCartTank['Tank Cart'/634, l='MpServer', x=737.16, y=68.50, z=1001.50], EntityCartTank['Tank Cart'/635, l='MpServer', x=738.69, y=68.50, z=1001.50], EntityCartTank['Tank Cart'/636, l='MpServer', x=740.28, y=68.50, z=1001.50], EntityCartTank['Tank Cart'/637, l='MpServer', x=741.81, y=68.50, z=1001.50], EntityCartTank['Tank Cart'/638, l='MpServer', x=743.41, y=68.50, z=1001.50], EntityCartTank['Tank Cart'/639, l='MpServer', x=744.94, y=68.50, z=1001.50], EntityCartTank['Tank Cart'/640, l='MpServer', x=746.50, y=68.50, z=1001.50], EntityCartTank['Tank Cart'/641, l='MpServer', x=748.06, y=68.50, z=1001.50], EntityCartWork['Work Cart'/642, l='MpServer', x=749.59, y=68.50, z=1001.50], EntityMinecartHopper['entity.MinecartHopper.name'/643, l='MpServer', x=751.19, y=68.50, z=1001.50], EntityBat['Bat'/644, l='MpServer', x=754.38, y=13.00, z=1000.75], EntityMinecartHopper['entity.MinecartHopper.name'/645, l='MpServer', x=752.72, y=68.50, z=1001.50], EntityMinecartHopper['entity.MinecartHopper.name'/646, l='MpServer', x=754.31, y=68.50, z=1001.50], EntityMinecartHopper['entity.MinecartHopper.name'/647, l='MpServer', x=755.84, y=68.50, z=1001.50], EntityMinecartHopper['entity.MinecartHopper.name'/648, l='MpServer', x=757.44, y=68.50, z=1001.50], EntityMinecartHopper['entity.MinecartHopper.name'/649, l='MpServer', x=758.97, y=68.50, z=1001.50], EntityMinecartHopper['entity.MinecartHopper.name'/650, l='MpServer', x=760.53, y=68.50, z=1001.50], EntityLocomotiveSteamSolid['ND4 0003'/651, l='MpServer', x=784.59, y=68.50, z=954.50], EntityLocomotiveSteamSolid['ND4 0004'/652, l='MpServer', x=786.56, y=68.50, z=954.50], EntityWaypointContainer['unknown'/653, l='MpServer', x=0.00, y=0.00, z=0.00], LMM_EntityLittleMaid['站长姬'/417, l='MpServer', x=661.75, y=62.00, z=950.38], EntityMinecartHopper['entity.MinecartHopper.name'/419, l='MpServer', x=658.38, y=68.50, z=945.50], EntityMinecartHopper['entity.MinecartHopper.name'/420, l='MpServer', x=659.88, y=68.50, z=945.50], EntityMinecartHopper['entity.MinecartHopper.name'/421, l='MpServer', x=661.47, y=68.50, z=945.50], EntityMinecartHopper['entity.MinecartHopper.name'/422, l='MpServer', x=656.78, y=68.50, z=945.50], EntityLocomotiveSteamSolid['DF7C 0001'/423, l='MpServer', x=657.38, y=68.50, z=950.50], EntityMinecartHopper['entity.MinecartHopper.name'/424, l='MpServer', x=665.50, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/425, l='MpServer', x=663.91, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/426, l='MpServer', x=662.38, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/427, l='MpServer', x=667.06, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/428, l='MpServer', x=668.59, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/429, l='MpServer', x=670.19, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/430, l='MpServer', x=671.72, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/431, l='MpServer', x=660.78, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/432, l='MpServer', x=659.25, y=68.50, z=956.50], EntityMinecartHopper['entity.MinecartHopper.name'/433, l='MpServer', x=657.66, y=68.50, z=956.50], EntityCartTank['Tank Cart'/478, l='MpServer', x=691.69, y=68.50, z=943.50], EntityCartTank['Tank Cart'/479, l='MpServer', x=690.16, y=68.50, z=943.50], EntityCartTank['Tank Cart'/480, l='MpServer', x=688.56, y=68.50, z=943.50], EntityCartTank['Tank Cart'/485, l='MpServer', x=685.47, y=68.50, z=943.50], EntityCartTank['Tank Cart'/486, l='MpServer', x=687.03, y=68.50, z=943.50]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.func_72914_a(WorldClient.java:373)
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2433)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:916)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_60, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 74690408 bytes (71 MB) / 512753664 bytes (489 MB) up to 512753664 bytes (489 MB)
+	JVM Flags: 1 total; -Xmx549m
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 96
+	FML: MCP v9.05 FML v7.10.85.1231 Minecraft Forge 10.13.2.1231 Optifine OptiFine_1.7.10_HD_U_B1[hukk汉化] 26 mods loaded, 26 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{7.10.85.1231} [Forge Mod Loader] (forge-1.7.10-10.13.2.1231.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{10.13.2.1231} [Minecraft Forge] (forge-1.7.10-10.13.2.1231.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	InputFix{1.7.x-v2} [InputFix] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	OldModelLoader{1.0} [OldModelLoader] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	TooManyItems{1.7.10[hukk汉化]} [TooManyItems] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	uniskinmod{1.1} [Universal Skin Mod] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	craftguide{1.5.2} [CraftGuide] (CraftGuide-1.6.8.0[hukk汉化].zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	healthbar{1.2} [Health Bar] (HealthBar-1.3-1.7.X.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	IC2{2.2.667-experimental} [IndustrialCraft 2] (industrialcraft-2-2.2.667-experimental.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ImmibisCore{59.0.1} [Immibis Core] (immibis-core-59.0.1.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	inventorytweaks{1.57-116} [Inventory Tweaks] (InventoryTweaks-1.58-dev-119.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	lmmx{1.0} [lmmx] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MMMLibX{1.7.x-srg-1} [MMMLibX] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	zabuton{1.0} [zabuton] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MovingWorld{1.7.10-1.8} [Moving World] (movingworld-1.7.10-1.8.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Core{6.3.4} [BuildCraft] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Builders{6.3.4} [BC Builders] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Energy{6.3.4} [BC Energy] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Factory{6.3.4} [BC Factory] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Railcraft{9.3.0.0} [Railcraft] (Railcraft_1.7.10-9.3.0.0.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	RedLogic{59.0.1} [RedLogic] (RedLogic-Mod-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	voxelmap{1.7.10} [VoxelMap No Radar] (Zans-Minimap-No-Radar-Mod-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	zyinhud{1.3.6} [Zyin's HUD] (ZyinsHUD-(1.7.10)-v.1.3.6.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Transport{6.3.4} [BC Transport] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Silicon{6.3.4} [BC Silicon] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 七国服务器-1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 5500 GL version 4.3.0 - Build 10.18.14.4029, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

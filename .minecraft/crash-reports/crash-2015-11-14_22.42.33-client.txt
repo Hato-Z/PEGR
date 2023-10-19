@@ -1,0 +1,154 @@
+---- Minecraft Crash Report ----
+// I feel sad now :(
+
+Time: 15-11-14 ÏÂÎç10:42
+Description: Unexpected error
+
+java.lang.NoSuchMethodError: buildcraft.api.core.JavaTools.getAllFields(Ljava/lang/Class;)Ljava/util/List;
+	at buildcraft.api.mj.MjAPI.getMjBatteryField(MjAPI.java:196)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:85)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:55)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:46)
+	at buildcraft.api.power.PowerHandler.<init>(PowerHandler.java:159)
+	at buildcraft.api.power.PowerHandler.<init>(PowerHandler.java:145)
+	at mods.railcraft.common.blocks.machine.alpha.TileRollingMachine.<init>(TileRollingMachine.java:66)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at mods.railcraft.common.blocks.machine.alpha.EnumMachineAlpha.getTileEntity(EnumMachineAlpha.java:129)
+	at mods.railcraft.common.blocks.machine.alpha.MachineProxyAlpha.getTileEntity(MachineProxyAlpha.java:31)
+	at mods.railcraft.common.blocks.machine.BlockMachine.createTileEntity(BlockMachine.java:275)
+	at net.minecraft.world.chunk.Chunk.func_150806_e(Chunk.java:850)
+	at net.minecraft.world.ChunkCache.func_147438_o(ChunkCache.java:97)
+	at mods.railcraft.common.blocks.machine.BlockMachine.getLightValue(BlockMachine.java:287)
+	at net.minecraft.block.Block.func_149677_c(Block.java:528)
+	at net.minecraft.client.renderer.RenderBlocks.func_147751_a(RenderBlocks.java:5012)
+	at net.minecraft.client.renderer.RenderBlocks.func_147784_q(RenderBlocks.java:4712)
+	at net.minecraft.client.renderer.RenderBlocks.func_147805_b(RenderBlocks.java:307)
+	at net.minecraft.client.renderer.WorldRenderer.func_147892_a(WorldRenderer.java:318)
+	at net.minecraft.client.renderer.RenderGlobal.func_72716_a(RenderGlobal.java:2232)
+	at net.minecraft.client.renderer.EntityRenderer.func_78471_a(EntityRenderer.java:1509)
+	at net.minecraft.client.renderer.EntityRenderer.func_78480_b(EntityRenderer.java:1302)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:990)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:887)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at buildcraft.api.mj.MjAPI.getMjBatteryField(MjAPI.java:196)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:85)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:55)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:46)
+	at buildcraft.api.power.PowerHandler.<init>(PowerHandler.java:159)
+	at buildcraft.api.power.PowerHandler.<init>(PowerHandler.java:145)
+	at mods.railcraft.common.blocks.machine.alpha.TileRollingMachine.<init>(TileRollingMachine.java:66)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at mods.railcraft.common.blocks.machine.alpha.EnumMachineAlpha.getTileEntity(EnumMachineAlpha.java:129)
+	at mods.railcraft.common.blocks.machine.alpha.MachineProxyAlpha.getTileEntity(MachineProxyAlpha.java:31)
+	at mods.railcraft.common.blocks.machine.BlockMachine.createTileEntity(BlockMachine.java:275)
+	at net.minecraft.world.chunk.Chunk.func_150806_e(Chunk.java:850)
+	at net.minecraft.world.ChunkCache.func_147438_o(ChunkCache.java:97)
+	at mods.railcraft.common.blocks.machine.BlockMachine.getLightValue(BlockMachine.java:287)
+	at net.minecraft.block.Block.func_149677_c(Block.java:528)
+	at net.minecraft.client.renderer.RenderBlocks.func_147751_a(RenderBlocks.java:5012)
+	at net.minecraft.client.renderer.RenderBlocks.func_147784_q(RenderBlocks.java:4712)
+	at net.minecraft.client.renderer.RenderBlocks.func_147805_b(RenderBlocks.java:307)
+	at net.minecraft.client.renderer.WorldRenderer.func_147892_a(WorldRenderer.java:318)
+	at net.minecraft.client.renderer.RenderGlobal.func_72716_a(RenderGlobal.java:2232)
+	at net.minecraft.client.renderer.EntityRenderer.func_78471_a(EntityRenderer.java:1509)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['selver'/405, l='MpServer', x=-1316.00, y=91.31, z=2084.10]]
+	Chunk stats: MultiplayerChunkCache: 255, 264
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (164,64,252), Chunk: (at 4,4,12 in 10,15; contains blocks 160,0,240 to 175,255,255), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 12951044 game time, 13421694 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 90 total; [EntityVillager['´åÃñ'/386, l='MpServer', x=-1311.50, y=71.00, z=2073.50], EntityVillager['´åÃñ'/387, l='MpServer', x=-1298.17, y=71.69, z=2080.61], EntityVillager['´åÃñ'/388, l='MpServer', x=-1299.44, y=70.00, z=2088.47], EntityVillager['´åÃñ'/389, l='MpServer', x=-1297.50, y=70.00, z=2088.50], EntityItem['item.item.seeds'/390, l='MpServer', x=-1305.91, y=70.13, z=2089.91], EntityVillager['´åÃñ'/391, l='MpServer', x=-1293.50, y=71.00, z=2076.72], EntityItem['item.item.seeds'/392, l='MpServer', x=-1307.78, y=70.13, z=2091.19], EntityChicken['¼¦'/776, l='MpServer', x=-1381.50, y=66.00, z=2025.81], EntityChicken['¼¦'/777, l='MpServer', x=-1381.50, y=65.00, z=2023.09], EntityChicken['¼¦'/778, l='MpServer', x=-1383.50, y=65.00, z=2026.50], EntityChicken['¼¦'/779, l='MpServer', x=-1382.50, y=65.00, z=2024.50], EntityChicken['¼¦'/780, l='MpServer', x=-1357.50, y=72.00, z=2035.50], EntityChicken['¼¦'/781, l='MpServer', x=-1357.50, y=72.00, z=2035.50], EntityChicken['¼¦'/782, l='MpServer', x=-1359.50, y=71.00, z=2034.50], EntityChicken['¼¦'/783, l='MpServer', x=-1359.50, y=72.00, z=2036.50], EntityBat['òùòð'/658, l='MpServer', x=-1249.53, y=20.00, z=2101.00], EntityVillager['´åÃñ'/407, l='MpServer', x=-1324.69, y=71.00, z=2094.28], EntityVillager['´åÃñ'/408, l='MpServer', x=-1323.66, y=72.00, z=2095.84], EntityVillager['´åÃñ'/409, l='MpServer', x=-1331.09, y=73.00, z=2106.51], EntityItem['item.item.doorWood'/410, l='MpServer', x=-1340.31, y=72.13, z=2098.56], EntityItem['item.item.seeds'/411, l='MpServer', x=-1338.91, y=72.13, z=2102.69], EntityBat['òùòð'/667, l='MpServer', x=-1243.53, y=20.00, z=2089.59], EntityBat['òùòð'/669, l='MpServer', x=-1249.34, y=21.00, z=2105.09], EntityItem['item.tile.torch'/417, l='MpServer', x=-1319.88, y=71.13, z=2087.53], EntityBat['òùòð'/673, l='MpServer', x=-1386.53, y=34.00, z=2149.29], EntityItem['item.item.seeds'/418, l='MpServer', x=-1322.88, y=71.13, z=2093.53], EntityVillager['´åÃñ'/419, l='MpServer', x=-1307.64, y=70.00, z=2092.09], EntityClientPlayerMP['selver'/405, l='MpServer', x=-1316.00, y=91.31, z=2084.10], EntityVillager['´åÃñ'/424, l='MpServer', x=-1306.50, y=70.00, z=2090.78], EntityVillager['´åÃñ'/429, l='MpServer', x=-1294.50, y=71.00, z=2080.50], LMM_EntityLittleMaid['Å®ÆÍ½´'/430, l='MpServer', x=-1255.50, y=70.00, z=2111.50], LMM_EntityLittleMaid['Å®ÆÍ½´'/687, l='MpServer', x=-1382.50, y=73.00, z=2081.50], LMM_EntityLittleMaid['Å®ÆÍ½´'/432, l='MpServer', x=-1254.50, y=70.00, z=2109.50], LMM_EntityLittleMaid['Å®ÆÍ½´'/689, l='MpServer', x=-1383.50, y=73.00, z=2082.50], LMM_EntityLittleMaid['Å®ÆÍ½´'/691, l='MpServer', x=-1383.50, y=73.00, z=2083.50], EntityChicken['¼¦'/819, l='MpServer', x=-1348.50, y=71.00, z=2011.50], LMM_EntityLittleMaid['Å®ÆÍ½´'/436, l='MpServer', x=-1262.50, y=69.00, z=2155.50], EntityChicken['¼¦'/820, l='MpServer', x=-1347.50, y=71.00, z=2009.50], EntityChicken['¼¦'/821, l='MpServer', x=-1347.50, y=71.00, z=2011.50], LMM_EntityLittleMaid['Å®ÆÍ½´'/438, l='MpServer', x=-1262.50, y=69.00, z=2161.50], EntityChicken['¼¦'/822, l='MpServer', x=-1349.50, y=71.00, z=2008.50], EntityChicken['¼¦'/823, l='MpServer', x=-1326.50, y=71.00, z=2017.50], EntityChicken['¼¦'/824, l='MpServer', x=-1325.50, y=71.00, z=2016.50], EntityBat['òùòð'/569, l='MpServer', x=-1258.25, y=26.02, z=2116.25], EntityChicken['¼¦'/825, l='MpServer', x=-1325.50, y=71.00, z=2014.50], EntityChicken['¼¦'/826, l='MpServer', x=-1322.50, y=71.00, z=2014.50], EntityChicken['¼¦'/827, l='MpServer', x=-1252.50, y=65.00, z=2009.50], EntityChicken['¼¦'/828, l='MpServer', x=-1250.50, y=65.00, z=2012.50], EntityBat['òùòð'/957, l='MpServer', x=-1365.50, y=24.49, z=2126.56], EntityChicken['¼¦'/829, l='MpServer', x=-1249.50, y=65.00, z=2012.50], EntitySheep['Ñò'/701, l='MpServer', x=-1392.50, y=73.00, z=2152.50], EntityBat['òùòð'/958, l='MpServer', x=-1371.56, y=25.59, z=2129.59], EntityChicken['¼¦'/830, l='MpServer', x=-1247.50, y=66.00, z=2012.50], EntitySheep['Ñò'/702, l='MpServer', x=-1392.50, y=73.00, z=2154.50], EntitySheep['Ñò'/703, l='MpServer', x=-1392.50, y=73.00, z=2156.50], EntitySheep['Ñò'/704, l='MpServer', x=-1394.50, y=72.00, z=2156.50], EntityBat['òùòð'/840, l='MpServer', x=-1305.69, y=12.39, z=2114.00], EntityFallingBlock['µôÂäµÄ·½¿é'/841, l='MpServer', x=-1415.50, y=19.82, z=2008.50], LMM_EntityLittleMaid['Å®ÆÍ½´'/713, l='MpServer', x=-1393.50, y=72.00, z=2148.50], EntityFallingBlock['µôÂäµÄ·½¿é'/842, l='MpServer', x=-1416.50, y=18.82, z=2007.50], EntityFallingBlock['µôÂäµÄ·½¿é'/843, l='MpServer', x=-1416.50, y=18.82, z=2006.50], LMM_EntityLittleMaid['Å®ÆÍ½´'/715, l='MpServer', x=-1391.50, y=73.00, z=2148.50], EntityFallingBlock['µôÂäµÄ·½¿é'/844, l='MpServer', x=-1415.50, y=18.82, z=2006.50], LMM_EntityLittleMaid['Å®ÆÍ½´'/717, l='MpServer', x=-1388.50, y=73.00, z=2146.50], EntityBat['òùòð'/595, l='MpServer', x=-1250.72, y=38.00, z=2091.97], EntityBat['òùòð'/851, l='MpServer', x=-1304.31, y=13.00, z=2114.84], EntityBat['òùòð'/852, l='MpServer', x=-1240.72, y=35.00, z=2107.13], EntityBat['òùòð'/853, l='MpServer', x=-1356.06, y=43.09, z=2104.91], EntityBat['òùòð'/603, l='MpServer', x=-1250.63, y=38.00, z=2092.25], EntityVillager['´åÃñ'/607, l='MpServer', x=-1316.16, y=71.00, z=2065.41], EntityFallingBlock['µôÂäµÄ·½¿é'/864, l='MpServer', x=-1415.50, y=21.17, z=2008.50], EntityFallingBlock['µôÂäµÄ·½¿é'/865, l='MpServer', x=-1416.50, y=20.17, z=2007.50], EntityFallingBlock['µôÂäµÄ·½¿é'/866, l='MpServer', x=-1416.50, y=20.17, z=2006.50], EntityFallingBlock['µôÂäµÄ·½¿é'/867, l='MpServer', x=-1415.50, y=20.17, z=2006.50], EntityFallingBlock['µôÂäµÄ·½¿é'/871, l='MpServer', x=-1416.50, y=20.97, z=2007.50], EntityFallingBlock['µôÂäµÄ·½¿é'/872, l='MpServer', x=-1416.50, y=20.97, z=2006.50], EntityFallingBlock['µôÂäµÄ·½¿é'/873, l='MpServer', x=-1415.50, y=20.97, z=2006.50], EntityVillager['´åÃñ'/745, l='MpServer', x=-1297.53, y=70.00, z=2057.92], EntityChicken['¼¦'/746, l='MpServer', x=-1305.50, y=70.00, z=2047.50], EntityChicken['¼¦'/747, l='MpServer', x=-1306.50, y=70.00, z=2048.50], EntityChicken['¼¦'/748, l='MpServer', x=-1310.50, y=70.00, z=2048.50], EntityChicken['¼¦'/749, l='MpServer', x=-1311.50, y=70.00, z=2048.50], EntityBat['òùòð'/753, l='MpServer', x=-1347.84, y=17.32, z=2127.42], EntityBat['òùòð'/754, l='MpServer', x=-1346.75, y=17.84, z=2126.48], EntityBat['òùòð'/755, l='MpServer', x=-1353.53, y=18.05, z=2134.38], EntityBat['òùòð'/762, l='MpServer', x=-1358.90, y=23.29, z=2073.42], EntityFallingBlock['µôÂäµÄ·½¿é'/890, l='MpServer', x=-1416.50, y=20.91, z=2007.50], EntityFallingBlock['µôÂäµÄ·½¿é'/891, l='MpServer', x=-1416.50, y=20.91, z=2006.50], EntityFallingBlock['µôÂäµÄ·½¿é'/892, l='MpServer', x=-1415.50, y=20.91, z=2006.50], EntityWaypointContainer['Î´Öª'/509, l='MpServer', x=0.00, y=0.00, z=0.00]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.func_72914_a(WorldClient.java:373)
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2433)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:916)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_60, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 208319184 bytes (198 MB) / 677904384 bytes (646 MB) up to 954728448 bytes (910 MB)
+	JVM Flags: 1 total; -Xmx1024m
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 15, tallocated: 95
+	FML: MCP v9.05 FML v7.10.85.1231 Minecraft Forge 10.13.2.1231 Optifine OptiFine_1.7.10_HD_U_B1[hukkºº»¯] 23 mods loaded, 23 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{7.10.85.1231} [Forge Mod Loader] (forge-1.7.10-10.13.2.1231.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{10.13.2.1231} [Minecraft Forge] (forge-1.7.10-10.13.2.1231.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	InputFix{1.7.x-v2} [InputFix] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	OldModelLoader{1.0} [OldModelLoader] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	TooManyItems{1.7.10[hukkºº»¯]} [TooManyItems] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	uniskinmod{1.1} [Universal Skin Mod] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	craftguide{1.5.2} [CraftGuide] (CraftGuide-1.6.8.0[hukkºº»¯].zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	healthbar{1.2} [Health Bar] (HealthBar-1.3-1.7.X.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	IC2{2.2.667-experimental} [IndustrialCraft 2] (industrialcraft-2-2.2.667-experimental.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	inventorytweaks{1.57-116} [Inventory Tweaks] (InventoryTweaks-1.58-dev-119.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	lmmx{1.0} [lmmx] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MMMLibX{1.7.x-srg-1} [MMMLibX] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	zabuton{1.0} [zabuton] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Core{6.3.4} [BuildCraft] (½¨Öþ-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Builders{6.3.4} [BC Builders] (½¨Öþ-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Energy{6.3.4} [BC Energy] (½¨Öþ-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Factory{6.3.4} [BC Factory] (½¨Öþ-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Railcraft{9.3.0.0} [Railcraft] (Railcraft_1.7.10-9.3.0.0.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	voxelmap{1.7.10} [VoxelMap No Radar] (Zans-Minimap-No-Radar-Mod-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	zyinhud{1.3.6} [Zyin's HUD] (ZyinsHUD-(1.7.10)-v.1.3.6.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Transport{6.3.4} [BC Transport] (½¨Öþ-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Silicon{6.3.4} [BC Silicon] (½¨Öþ-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: Æß¹ú·þÎñÆ÷-1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 5500 GL version 4.3.0 - Build 10.18.14.4029, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: ¼òÌåÖÐÎÄ (ÖÐ¹ú)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

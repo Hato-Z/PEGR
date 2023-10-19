@@ -1,0 +1,112 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 15-7-17 下午2:20
+Description: Unexpected error
+
+java.util.ConcurrentModificationException
+	at com.google.common.collect.HashBiMap$Itr.checkForConcurrentModification(HashBiMap.java:339)
+	at com.google.common.collect.HashBiMap$Itr.hasNext(HashBiMap.java:345)
+	at net.minecraft.client.audio.SoundManager.func_148605_d(SoundManager.java:212)
+	at net.minecraft.client.audio.SoundHandler.func_73660_a(SourceFile:179)
+	at net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:2002)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:962)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:887)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.google.common.collect.HashBiMap$Itr.checkForConcurrentModification(HashBiMap.java:339)
+	at com.google.common.collect.HashBiMap$Itr.hasNext(HashBiMap.java:345)
+	at net.minecraft.client.audio.SoundManager.func_148605_d(SoundManager.java:212)
+	at net.minecraft.client.audio.SoundHandler.func_73660_a(SourceFile:179)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['selver'/457, l='MpServer', x=-871.14, y=70.62, z=1764.82]]
+	Chunk stats: MultiplayerChunkCache: 273, 282
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (164,64,252), Chunk: (at 4,4,12 in 10,15; contains blocks 160,0,240 to 175,255,255), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 10408845 game time, 8908825 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 45 total; [EntityCartChest['entity.MinecartChest.name'/36909, l='MpServer', x=-921.50, y=19.50, z=1884.50], EntityTunnelBore['隧道盾构车'/10, l='MpServer', x=-819.50, y=68.50, z=1725.19], EntityTunnelBore['隧道盾构车'/11, l='MpServer', x=-821.50, y=68.50, z=1717.78], EntityCartAnchorAdmin['管理员锚车'/13, l='MpServer', x=-819.50, y=68.50, z=1721.38], EntityItem['item.item.cake'/36912, l='MpServer', x=-808.22, y=69.13, z=1749.31], EntityCartChest['entity.MinecartChest.name'/36851, l='MpServer', x=-803.50, y=17.50, z=1849.50], EntityCartChest['entity.MinecartChest.name'/36873, l='MpServer', x=-904.50, y=19.50, z=1871.50], LMM_EntityLittleMaid['女仆酱'/29679, l='MpServer', x=-873.50, y=69.00, z=1756.50], LMM_EntityLittleMaid['女仆酱'/29677, l='MpServer', x=-888.28, y=70.00, z=1763.38], EntitySquid['鱿鱼'/36781, l='MpServer', x=-927.50, y=60.00, z=1761.81], EntitySquid['鱿鱼'/36780, l='MpServer', x=-930.50, y=60.00, z=1766.50], EntitySquid['鱿鱼'/36782, l='MpServer', x=-928.50, y=60.00, z=1772.50], EntityCartChest['entity.MinecartChest.name'/36937, l='MpServer', x=-770.50, y=13.34, z=1903.50], EntityCartChest['entity.MinecartChest.name'/36944, l='MpServer', x=-888.50, y=10.50, z=1891.50], EntitySquid['鱿鱼'/36732, l='MpServer', x=-931.50, y=60.00, z=1770.50], EntityBat['蝙蝠'/37565, l='MpServer', x=-835.31, y=48.00, z=1835.28], EntityBat['蝙蝠'/36669, l='MpServer', x=-793.44, y=18.10, z=1830.13], LMM_EntityLittleMaid['女仆酱'/36630, l='MpServer', x=-861.53, y=68.00, z=1801.78], EntityItem['item.tile.torch'/36634, l='MpServer', x=-839.13, y=27.13, z=1806.09], LMM_EntityLittleMaid['女仆酱'/36632, l='MpServer', x=-864.50, y=67.00, z=1800.50], LMM_EntityLittleMaid['女仆酱'/31251, l='MpServer', x=-938.50, y=63.00, z=1780.50], EntityCartChest['entity.MinecartChest.name'/37245, l='MpServer', x=-928.50, y=43.50, z=1715.50], LMM_EntityLittleMaid['女仆酱'/31249, l='MpServer', x=-936.50, y=63.00, z=1779.50], EntityCartChest['entity.MinecartChest.name'/31255, l='MpServer', x=-922.50, y=32.50, z=1780.50], LMM_EntityLittleMaid['女仆酱'/31253, l='MpServer', x=-939.50, y=63.00, z=1778.50], LMM_EntityLittleMaid['女仆酱'/31256, l='MpServer', x=-871.44, y=69.00, z=1761.69], EntityCartChest['entity.MinecartChest.name'/22186, l='MpServer', x=-819.50, y=29.50, z=1703.50], EntityCartChest['entity.MinecartChest.name'/29733, l='MpServer', x=-822.50, y=27.50, z=1769.50], EntityCartChest['entity.MinecartChest.name'/37309, l='MpServer', x=-952.50, y=32.50, z=1768.50], EntityCartChest['entity.MinecartChest.name'/37308, l='MpServer', x=-949.50, y=32.50, z=1770.50], LMM_EntityLittleMaid['女仆酱'/29731, l='MpServer', x=-871.06, y=69.00, z=1762.97], EntityCartChest['entity.MinecartChest.name'/29726, l='MpServer', x=-869.50, y=27.50, z=1769.50], LMM_EntityLittleMaid['女仆酱'/29727, l='MpServer', x=-869.22, y=69.00, z=1766.72], EntityItem['item.tile.torch'/29725, l='MpServer', x=-885.88, y=28.13, z=1770.97], EntityWaypointContainer['未知'/477, l='MpServer', x=0.00, y=0.00, z=0.00], EntityClientPlayerMP['selver'/457, l='MpServer', x=-871.14, y=70.62, z=1764.82], EntityItem['item.tile.torch'/30316, l='MpServer', x=-932.16, y=36.13, z=1728.25], EntityBat['蝙蝠'/37330, l='MpServer', x=-823.56, y=27.25, z=1795.13], EntityBat['蝙蝠'/37329, l='MpServer', x=-833.50, y=25.86, z=1780.75], EntityBat['蝙蝠'/37328, l='MpServer', x=-838.25, y=29.09, z=1781.50], EntityCartChest['entity.MinecartChest.name'/37343, l='MpServer', x=-973.50, y=19.50, z=1766.50], EntityBat['蝙蝠'/37326, l='MpServer', x=-888.25, y=21.00, z=1839.75], EntityBat['蝙蝠'/37327, l='MpServer', x=-827.25, y=27.00, z=1775.88], EntityBat['蝙蝠'/37324, l='MpServer', x=-902.75, y=14.00, z=1821.25], EntityBat['蝙蝠'/37325, l='MpServer', x=-904.09, y=14.00, z=1822.75]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.func_72914_a(WorldClient.java:373)
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2433)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:916)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows XP (x86) version 5.1
+	Java Version: 1.7.0_67, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode), Oracle Corporation
+	Memory: 421392608 bytes (401 MB) / 980213760 bytes (934 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 1 total; -Xmx1024m
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 1, tcache: 0, allocated: 12, tallocated: 96
+	FML: MCP v9.05 FML v7.10.85.1231 Minecraft Forge 10.13.2.1231 Optifine OptiFine_1.7.10_HD_U_B1[hukk汉化] 23 mods loaded, 23 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{7.10.85.1231} [Forge Mod Loader] (forge-1.7.10-10.13.2.1231.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{10.13.2.1231} [Minecraft Forge] (forge-1.7.10-10.13.2.1231.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	InputFix{1.7.x-v2} [InputFix] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	OldModelLoader{1.0} [OldModelLoader] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	TooManyItems{1.7.10[hukk汉化]} [TooManyItems] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	uniskinmod{1.1} [Universal Skin Mod] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	craftguide{1.5.2} [CraftGuide] (CraftGuide-1.6.8.0[hukk汉化].zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	healthbar{1.2} [Health Bar] (HealthBar-1.3-1.7.X.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	IC2{2.2.667-experimental} [IndustrialCraft 2] (industrialcraft-2-2.2.667-experimental.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	inventorytweaks{1.57-116} [Inventory Tweaks] (InventoryTweaks-1.58-dev-119.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	lmmx{1.0} [lmmx] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MMMLibX{1.7.x-srg-1} [MMMLibX] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	zabuton{1.0} [zabuton] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Core{6.3.4} [BuildCraft] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Builders{6.3.4} [BC Builders] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Energy{6.3.4} [BC Energy] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Factory{6.3.4} [BC Factory] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Railcraft{9.3.0.0} [Railcraft] (Railcraft_1.7.10-9.3.0.0.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	voxelmap{1.7.10} [VoxelMap No Radar] (Zans-Minimap-No-Radar-Mod-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	zyinhud{1.3.6} [Zyin's HUD] (ZyinsHUD-(1.7.10)-v.1.3.6.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Transport{6.3.4} [BC Transport] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Silicon{6.3.4} [BC Silicon] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 七国服务器-1.7.10
+	LWJGL: 2.9.1
+	OpenGL: NVS 3100M/PCIe/SSE2 GL version 3.3.0, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: 简体中文 (中国)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

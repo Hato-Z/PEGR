@@ -1,0 +1,19 @@
+[code]TMI Version: 1.7.10 2014-07-15
+java.lang.NullPointerException
+	at net.minecraft.item.ItemStack.func_77952_i(ItemStack.java:212)
+	at TMIUtils.itemDisplayNameMultiline(TMIUtils.java:483)
+	at TMIUtils.itemDisplayNameMultiline(TMIUtils.java:459)
+	at TMIView.determineTooltip(TMIView.java:317)
+	at TMIController.onEnterFrame(TMIController.java:103)
+	at net.minecraft.client.gui.inventory.GuiContainer.func_73863_a(bex.java:113)
+	at net.minecraft.client.renderer.EntityRenderer.func_78480_b(EntityRenderer.java:1355)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:990)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:887)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+[/code]

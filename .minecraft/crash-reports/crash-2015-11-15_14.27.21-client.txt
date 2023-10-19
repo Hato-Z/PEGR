@@ -1,0 +1,154 @@
+---- Minecraft Crash Report ----
+// Why is it breaking :(
+
+Time: 15-11-15 下午2:27
+Description: Unexpected error
+
+java.lang.NoSuchMethodError: buildcraft.api.core.JavaTools.getAllFields(Ljava/lang/Class;)Ljava/util/List;
+	at buildcraft.api.mj.MjAPI.getMjBatteryField(MjAPI.java:196)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:85)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:55)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:46)
+	at buildcraft.api.power.PowerHandler.<init>(PowerHandler.java:159)
+	at buildcraft.api.power.PowerHandler.<init>(PowerHandler.java:145)
+	at mods.railcraft.common.blocks.machine.alpha.TileRollingMachine.<init>(TileRollingMachine.java:66)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at mods.railcraft.common.blocks.machine.alpha.EnumMachineAlpha.getTileEntity(EnumMachineAlpha.java:129)
+	at mods.railcraft.common.blocks.machine.alpha.MachineProxyAlpha.getTileEntity(MachineProxyAlpha.java:31)
+	at mods.railcraft.common.blocks.machine.BlockMachine.createTileEntity(BlockMachine.java:275)
+	at net.minecraft.world.chunk.Chunk.func_150806_e(Chunk.java:850)
+	at net.minecraft.world.ChunkCache.func_147438_o(ChunkCache.java:97)
+	at mods.railcraft.common.blocks.machine.BlockMachine.getLightValue(BlockMachine.java:287)
+	at net.minecraft.block.Block.func_149677_c(Block.java:528)
+	at net.minecraft.client.renderer.RenderBlocks.func_147751_a(RenderBlocks.java:5012)
+	at net.minecraft.client.renderer.RenderBlocks.func_147784_q(RenderBlocks.java:4712)
+	at net.minecraft.client.renderer.RenderBlocks.func_147805_b(RenderBlocks.java:307)
+	at net.minecraft.client.renderer.WorldRenderer.func_147892_a(WorldRenderer.java:318)
+	at net.minecraft.client.renderer.RenderGlobal.func_72716_a(RenderGlobal.java:2232)
+	at net.minecraft.client.renderer.EntityRenderer.func_78471_a(EntityRenderer.java:1509)
+	at net.minecraft.client.renderer.EntityRenderer.func_78480_b(EntityRenderer.java:1302)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:990)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:887)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at buildcraft.api.mj.MjAPI.getMjBatteryField(MjAPI.java:196)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:85)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:55)
+	at buildcraft.api.mj.MjAPI.getMjBattery(MjAPI.java:46)
+	at buildcraft.api.power.PowerHandler.<init>(PowerHandler.java:159)
+	at buildcraft.api.power.PowerHandler.<init>(PowerHandler.java:145)
+	at mods.railcraft.common.blocks.machine.alpha.TileRollingMachine.<init>(TileRollingMachine.java:66)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at mods.railcraft.common.blocks.machine.alpha.EnumMachineAlpha.getTileEntity(EnumMachineAlpha.java:129)
+	at mods.railcraft.common.blocks.machine.alpha.MachineProxyAlpha.getTileEntity(MachineProxyAlpha.java:31)
+	at mods.railcraft.common.blocks.machine.BlockMachine.createTileEntity(BlockMachine.java:275)
+	at net.minecraft.world.chunk.Chunk.func_150806_e(Chunk.java:850)
+	at net.minecraft.world.ChunkCache.func_147438_o(ChunkCache.java:97)
+	at mods.railcraft.common.blocks.machine.BlockMachine.getLightValue(BlockMachine.java:287)
+	at net.minecraft.block.Block.func_149677_c(Block.java:528)
+	at net.minecraft.client.renderer.RenderBlocks.func_147751_a(RenderBlocks.java:5012)
+	at net.minecraft.client.renderer.RenderBlocks.func_147784_q(RenderBlocks.java:4712)
+	at net.minecraft.client.renderer.RenderBlocks.func_147805_b(RenderBlocks.java:307)
+	at net.minecraft.client.renderer.WorldRenderer.func_147892_a(WorldRenderer.java:318)
+	at net.minecraft.client.renderer.RenderGlobal.func_72716_a(RenderGlobal.java:2232)
+	at net.minecraft.client.renderer.EntityRenderer.func_78471_a(EntityRenderer.java:1509)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['selver'/412, l='MpServer', x=-1316.00, y=91.31, z=2084.10]]
+	Chunk stats: MultiplayerChunkCache: 110, 119
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (164,64,252), Chunk: (at 4,4,12 in 10,15; contains blocks 160,0,240 to 175,255,255), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 12951219 game time, 13421869 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 68 total; [EntityVillager['村民'/386, l='MpServer', x=-1306.06, y=67.00, z=2073.75], EntityBat['蝙蝠'/514, l='MpServer', x=-1342.16, y=19.70, z=2125.47], EntityVillager['村民'/387, l='MpServer', x=-1303.06, y=71.00, z=2067.50], EntityVillager['村民'/388, l='MpServer', x=-1297.50, y=70.00, z=2088.50], EntityItem['item.item.seeds'/389, l='MpServer', x=-1305.94, y=70.13, z=2089.91], EntityChicken['鸡'/517, l='MpServer', x=-1326.50, y=71.00, z=2017.50], EntityItem['item.item.seeds'/390, l='MpServer', x=-1307.78, y=70.13, z=2091.19], EntityChicken['鸡'/518, l='MpServer', x=-1325.50, y=71.00, z=2016.50], EntityVillager['村民'/391, l='MpServer', x=-1306.50, y=70.00, z=2090.78], EntityChicken['鸡'/519, l='MpServer', x=-1314.63, y=71.00, z=2045.59], EntityVillager['村民'/392, l='MpServer', x=-1307.00, y=70.00, z=2093.50], EntityVillager['村民'/520, l='MpServer', x=-1316.16, y=71.00, z=2065.41], EntityVillager['村民'/393, l='MpServer', x=-1298.69, y=72.00, z=2080.16], EntityChicken['鸡'/521, l='MpServer', x=-1305.50, y=70.00, z=2047.50], EntityBat['蝙蝠'/522, l='MpServer', x=-1307.55, y=12.69, z=2113.20], EntityVillager['村民'/394, l='MpServer', x=-1293.50, y=71.00, z=2076.72], EntityItem['item.item.doorWood'/395, l='MpServer', x=-1340.31, y=72.13, z=2098.53], EntityBat['蝙蝠'/523, l='MpServer', x=-1307.84, y=13.00, z=2113.34], EntityItem['item.item.seeds'/396, l='MpServer', x=-1338.94, y=72.13, z=2102.66], EntityVillager['村民'/524, l='MpServer', x=-1294.50, y=71.00, z=2080.50], EntityVillager['村民'/397, l='MpServer', x=-1321.16, y=72.00, z=2099.53], EntityVillager['村民'/525, l='MpServer', x=-1295.72, y=70.00, z=2083.63], EntityChicken['鸡'/398, l='MpServer', x=-1306.50, y=70.00, z=2048.50], EntityChicken['鸡'/399, l='MpServer', x=-1311.50, y=70.00, z=2048.50], EntityBat['蝙蝠'/531, l='MpServer', x=-1250.49, y=38.00, z=2092.75], EntityBat['蝙蝠'/532, l='MpServer', x=-1250.13, y=21.60, z=2102.86], EntityBat['蝙蝠'/533, l='MpServer', x=-1251.62, y=21.00, z=2104.50], LMM_EntityLittleMaid['女仆酱'/534, l='MpServer', x=-1255.50, y=70.00, z=2111.50], LMM_EntityLittleMaid['女仆酱'/536, l='MpServer', x=-1254.50, y=70.00, z=2109.50], EntityBat['蝙蝠'/538, l='MpServer', x=-1259.30, y=26.61, z=2116.52], LMM_EntityLittleMaid['女仆酱'/539, l='MpServer', x=-1262.50, y=69.00, z=2155.50], EntityItem['item.tile.torch'/413, l='MpServer', x=-1319.88, y=71.13, z=2087.50], LMM_EntityLittleMaid['女仆酱'/541, l='MpServer', x=-1262.50, y=69.00, z=2161.50], EntityItem['item.item.seeds'/414, l='MpServer', x=-1322.88, y=71.13, z=2093.50], EntityVillager['村民'/415, l='MpServer', x=-1324.69, y=71.00, z=2094.28], EntityVillager['村民'/416, l='MpServer', x=-1323.66, y=72.00, z=2095.84], EntityClientPlayerMP['selver'/412, l='MpServer', x=-1316.00, y=91.31, z=2084.10], EntityBat['蝙蝠'/548, l='MpServer', x=-1244.40, y=21.86, z=2090.88], EntityBat['蝙蝠'/549, l='MpServer', x=-1245.51, y=39.23, z=2089.22], EntityBat['蝙蝠'/551, l='MpServer', x=-1240.82, y=35.46, z=2104.28], EntityWaypointContainer['未知'/430, l='MpServer', x=0.00, y=0.00, z=0.00], LMM_EntityLittleMaid['女仆酱'/452, l='MpServer', x=-1395.50, y=72.00, z=2071.50], EntitySheep['羊'/458, l='MpServer', x=-1392.41, y=73.00, z=2152.34], EntitySheep['羊'/459, l='MpServer', x=-1392.50, y=73.00, z=2154.50], EntitySheep['羊'/460, l='MpServer', x=-1392.50, y=73.00, z=2156.50], EntitySheep['羊'/461, l='MpServer', x=-1394.50, y=72.00, z=2156.50], LMM_EntityLittleMaid['女仆酱'/462, l='MpServer', x=-1393.50, y=72.00, z=2148.50], LMM_EntityLittleMaid['女仆酱'/464, l='MpServer', x=-1396.50, y=72.00, z=2145.50], EntityChicken['鸡'/470, l='MpServer', x=-1381.50, y=66.00, z=2025.81], EntityChicken['鸡'/471, l='MpServer', x=-1381.50, y=65.00, z=2023.06], EntityChicken['鸡'/472, l='MpServer', x=-1383.50, y=65.00, z=2026.50], EntityChicken['鸡'/473, l='MpServer', x=-1381.81, y=66.00, z=2024.41], LMM_EntityLittleMaid['女仆酱'/474, l='MpServer', x=-1382.50, y=73.00, z=2081.50], LMM_EntityLittleMaid['女仆酱'/476, l='MpServer', x=-1383.50, y=73.00, z=2082.50], LMM_EntityLittleMaid['女仆酱'/478, l='MpServer', x=-1383.50, y=73.00, z=2083.50], EntityBat['蝙蝠'/480, l='MpServer', x=-1375.83, y=33.74, z=2152.44], LMM_EntityLittleMaid['女仆酱'/481, l='MpServer', x=-1391.50, y=73.00, z=2148.50], LMM_EntityLittleMaid['女仆酱'/483, l='MpServer', x=-1388.50, y=73.00, z=2146.50], EntityBat['蝙蝠'/487, l='MpServer', x=-1369.06, y=26.14, z=2125.78], EntityBat['蝙蝠'/488, l='MpServer', x=-1367.22, y=25.45, z=2125.00], EntityChicken['鸡'/498, l='MpServer', x=-1357.50, y=72.00, z=2035.50], EntityChicken['鸡'/499, l='MpServer', x=-1357.50, y=72.00, z=2035.50], EntityChicken['鸡'/500, l='MpServer', x=-1359.50, y=71.00, z=2034.50], EntityChicken['鸡'/501, l='MpServer', x=-1359.50, y=72.00, z=2036.50], EntityBat['蝙蝠'/502, l='MpServer', x=-1355.42, y=26.96, z=2079.47], EntityBat['蝙蝠'/503, l='MpServer', x=-1352.88, y=34.76, z=2097.72], EntityBat['蝙蝠'/504, l='MpServer', x=-1349.99, y=17.00, z=2130.37], EntityBat['蝙蝠'/505, l='MpServer', x=-1352.48, y=18.68, z=2137.57]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.func_72914_a(WorldClient.java:373)
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2433)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:916)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_60, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 242365944 bytes (231 MB) / 658505728 bytes (628 MB) up to 954728448 bytes (910 MB)
+	JVM Flags: 1 total; -Xmx1024m
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 3, tcache: 0, allocated: 12, tallocated: 96
+	FML: MCP v9.05 FML v7.10.85.1231 Minecraft Forge 10.13.2.1231 Optifine OptiFine_1.7.10_HD_U_B1[hukk汉化] 23 mods loaded, 23 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{7.10.85.1231} [Forge Mod Loader] (forge-1.7.10-10.13.2.1231.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{10.13.2.1231} [Minecraft Forge] (forge-1.7.10-10.13.2.1231.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	InputFix{1.7.x-v2} [InputFix] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	OldModelLoader{1.0} [OldModelLoader] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	TooManyItems{1.7.10[hukk汉化]} [TooManyItems] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	uniskinmod{1.1} [Universal Skin Mod] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	craftguide{1.5.2} [CraftGuide] (CraftGuide-1.6.8.0[hukk汉化].zip) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	healthbar{1.2} [Health Bar] (HealthBar-1.3-1.7.X.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	IC2{2.2.667-experimental} [IndustrialCraft 2] (industrialcraft-2-2.2.667-experimental.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	inventorytweaks{1.57-116} [Inventory Tweaks] (InventoryTweaks-1.58-dev-119.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	lmmx{1.0} [lmmx] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MMMLibX{1.7.x-srg-1} [MMMLibX] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	zabuton{1.0} [zabuton] (littleMaidMobX-1.7.10_0.0.8_pre2.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Core{6.3.4} [BuildCraft] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Builders{6.3.4} [BC Builders] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Energy{6.3.4} [BC Energy] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Factory{6.3.4} [BC Factory] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Railcraft{9.3.0.0} [Railcraft] (Railcraft_1.7.10-9.3.0.0.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	voxelmap{1.7.10} [VoxelMap No Radar] (Zans-Minimap-No-Radar-Mod-1.7.10.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	zyinhud{1.3.6} [Zyin's HUD] (ZyinsHUD-(1.7.10)-v.1.3.6.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Transport{6.3.4} [BC Transport] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	BuildCraft|Silicon{6.3.4} [BC Silicon] (建筑-6.3.4.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 七国服务器-1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 5500 GL version 4.3.0 - Build 10.18.14.4029, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: 简体中文 (中国)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)
